@@ -1,6 +1,6 @@
 <?php namespace Taiters\Migriffy\Parsers;
 
-class EntityWithMultipleAttributes {
+class EntityWithMultipleAttributes extends BaseParser {
 
 	
 }

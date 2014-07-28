@@ -16,15 +16,26 @@ class Parser {
 
 	public function parse( $data ) {
 
+		$gliffyNodes = array();
+
 		foreach( $data->stage->objects as $object ) {
-			
-			$this->parseObject( $object );
+
+			array_push( $gliffyNodes, $this->parseObject( $object ) );
 		}
+
+		dd( $gliffyNodes );
 	}
 
-	public function parseObject( $object ) {
+	private function parseObject( $object ) {
 
-		$parserName = $this->translator->toBinding( $object->uid );
+		$parser = $this->getParser( $object->uid );
 
+		return $parser->parse( $object );
+
+	}
+
+	private function getParser( $uid ) {
+
+		return $this->app->make( $this->translator->toBinding( $uid ) );
 	}
 }
