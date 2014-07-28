@@ -20,7 +20,10 @@ class UidTranslator implements Translator{
 
 	private function getType( $uid ) {
 
-		return substr( $uid, strrpos( $uid, '.' ) + 1 );
+		$matches = array();
+		preg_match('/[^\.]+$/', $uid, $matches);
+
+		return $matches[0];
 	}
 
 }

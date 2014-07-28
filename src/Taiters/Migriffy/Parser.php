@@ -17,7 +17,7 @@ class Parser {
 	public function parse( $data ) {
 
 		foreach( $data->stage->objects as $object ) {
-
+			
 			$this->parseObject( $object );
 		}
 	}

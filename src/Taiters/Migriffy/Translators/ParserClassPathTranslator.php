@@ -18,11 +18,12 @@ class ParserClassPathTranslator implements Translator{
 		return sprintf( '%s\%s', 'Taiters\Migriffy\Parsers', Inflector::classify( $class ) );
 	}
 
-	private function getClass( $uid ) {
+	private function getClass( $filename ) {
 
-		$filename = substr( $uid, strrpos( $uid, '/' ) + 1 );
+		$matches = array();
+		$filename = preg_match('/([^\/]+)$/', preg_replace('/\.php$/', '', $filename), $matches);
 
-		return substr( $filename, 0, strpos( $filename, '.' ) );
+		return $matches[0];
 	}
 
 }
