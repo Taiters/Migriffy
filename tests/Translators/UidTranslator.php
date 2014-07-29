@@ -44,37 +44,37 @@ class UidTranslatorTest extends PHPUnit_Framework_TestCase {
 	public function testToClassWithSingleWordLcFirst() {
 
 		$string = 'many';
-		$this->assertEquals('Taiters\Migriffy\Parsers\Many', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\Many', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithSingleWordUcFirst() {
 
 		$string = 'Many';
-		$this->assertEquals('Taiters\Migriffy\Parsers\Many', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\Many', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithMultipleWord() {
 		
 		$string = 'entity_with_multiple_attributes';
-		$this->assertEquals('Taiters\Migriffy\Parsers\EntityWithMultipleAttributes', $this->getTranslatedClass($string));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\EntityWithMultipleAttributes', $this->getTranslatedClass($string));
 	}
 
 	public function testToClassWithFullUidWithOneWordName() {
 
 		$string = 'com.gliffy.shape.erd.erd_v1.default.many';
-		$this->assertEquals('Taiters\Migriffy\Parsers\Many', $this->getTranslatedClass($string));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\Many', $this->getTranslatedClass($string));
 	}
 
 	public function testToClassWithFullUidWithMultipleWordName() {
 
 		$string = 'com.gliffy.shape.erd.erd_v1.default.entity_with_multiple_attributes';
-		$this->assertEquals('Taiters\Migriffy\Parsers\EntityWithMultipleAttributes', $this->getTranslatedClass($string));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\EntityWithMultipleAttributes', $this->getTranslatedClass($string));
 	}
 
 	public function testToClassWithFullUidMixedCases() {
 
 		$string = 'com.gliffy.shape.erd.erd_v1.default.Entity_with_Multiple_Attributes';
-		$this->assertEquals('Taiters\Migriffy\Parsers\EntityWithMultipleAttributes', $this->getTranslatedClass($string));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\EntityWithMultipleAttributes', $this->getTranslatedClass($string));
 	}
 
 

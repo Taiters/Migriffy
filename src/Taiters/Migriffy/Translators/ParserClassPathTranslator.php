@@ -15,7 +15,7 @@ class ParserClassPathTranslator implements Translator{
 
 		$class = $this->getClass( $classPath );
 
-		return sprintf( '%s\%s', 'Taiters\Migriffy\Parsers', Inflector::classify( $class ) );
+		return sprintf( '%s\%s', 'Taiters\Migriffy\Parsers\Nodes', Inflector::classify( $class ) );
 	}
 
 	private function getClass( $filename ) {

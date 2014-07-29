@@ -81,73 +81,73 @@ class ParserClassPathTranslatorTest extends PHPUnit_Framework_TestCase {
 	public function testToClassWithSnakeCaseFilename() {
 
 		$string = 'hello_world.php';
-		$this->assertEquals('Taiters\Migriffy\Parsers\HelloWorld', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\HelloWorld', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithSnakeCaseFilenameAndRelativePath() {
 
 		$string = 'this/is_a/path_this_way.php';
-		$this->assertEquals('Taiters\Migriffy\Parsers\PathThisWay', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\PathThisWay', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithSnakeCaseFilenameAndNoExtension() {
 
 		$string = 'hello_world';
-		$this->assertEquals('Taiters\Migriffy\Parsers\HelloWorld', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\HelloWorld', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithSnakeCaseFilenameAndNoExtensionAndRelativePath() {
 
 		$string = 'this/is_a/path_this_way';
-		$this->assertEquals('Taiters\Migriffy\Parsers\PathThisWay', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\PathThisWay', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithSnakeCaseFilenameAndAbsolutePath() {
 
 		$string = '/this/is_a/path_this_way.php';
-		$this->assertEquals('Taiters\Migriffy\Parsers\PathThisWay', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\PathThisWay', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithSnakeCaseFilenameAndNoExtensionAndAbsolutePath() {
 
 		$string = '/this/is_a/path_this_way';
-		$this->assertEquals('Taiters\Migriffy\Parsers\PathThisWay', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\PathThisWay', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithCamelCaseFilename() {
 
 		$string = 'helloWorld.php';
-		$this->assertEquals('Taiters\Migriffy\Parsers\HelloWorld', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\HelloWorld', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithCamelCaseFilenameAndRelativePath() {
 
 		$string = 'this/isA/pathThisWay.php';
-		$this->assertEquals('Taiters\Migriffy\Parsers\PathThisWay', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\PathThisWay', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithCamelCaseFilenameAndNoExtension() {
 
 		$string = 'helloWorld';
-		$this->assertEquals('Taiters\Migriffy\Parsers\HelloWorld', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\HelloWorld', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithCamelCaseFilenameAndNoExtensionAndRelativePath() {
 
 		$string = 'this/isA/pathThisWay';
-		$this->assertEquals('Taiters\Migriffy\Parsers\PathThisWay', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\PathThisWay', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithCamelCaseFilenameAndAbsolutePath() {
 
 		$string = '/this/isA/pathThisWay.php';
-		$this->assertEquals('Taiters\Migriffy\Parsers\PathThisWay', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\PathThisWay', $this->getTranslatedClass( $string ));
 	}
 
 	public function testToClassWithCamelCaseFilenameAndNoExtensionAndAbsolutePath() {
 
 		$string = '/this/isA/pathThisWay';
-		$this->assertEquals('Taiters\Migriffy\Parsers\PathThisWay', $this->getTranslatedClass( $string ));
+		$this->assertEquals('Taiters\Migriffy\Parsers\Nodes\PathThisWay', $this->getTranslatedClass( $string ));
 	}
 
 

@@ -50,7 +50,7 @@ class MigriffyServiceProvider extends ServiceProvider {
 
 	private function getParsers() {
 
-		$dir = __DIR__.DIRECTORY_SEPARATOR.'Parsers';
+		$dir = __DIR__.DIRECTORY_SEPARATOR.'Parsers'.DIRECTORY_SEPARATOR.'Nodes';
 
 		return File::files($dir);
 	}

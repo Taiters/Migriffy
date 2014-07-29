@@ -15,7 +15,7 @@ class UidTranslator implements Translator{
 		
 		$type = $this->getType( $uid );
 
-		return sprintf( '%s\%s', 'Taiters\Migriffy\Parsers', Inflector::classify( $type ) );
+		return sprintf( '%s\%s', 'Taiters\Migriffy\Parsers\Nodes', Inflector::classify( $type ) );
 	}
 
 	private function getType( $uid ) {

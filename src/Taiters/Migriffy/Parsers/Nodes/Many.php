@@ -1,6 +1,6 @@
-<?php namespace Taiters\Migriffy\Parsers;
+<?php namespace Taiters\Migriffy\Parsers\Nodes;
 
-class Many extends BaseParser {
+class Many extends BaseNodeParser {
 
 	public function parse( $object ) {
 
