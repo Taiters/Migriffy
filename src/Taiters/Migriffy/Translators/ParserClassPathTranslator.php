@@ -2,7 +2,7 @@
 
 use Doctrine\Common\Inflector\Inflector;
 
-class ParserClassPathTranslator implements Translator{
+class ParserClassPathTranslator implements ParserTranslator{
 
 	public function toBinding( $classPath ) {
 

@@ -1,13 +1,13 @@
 <?php
 
-class User extends Eloquent {
+class {{ name }} extends Eloquent {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = {{ table }};
+	protected $table = '{{ table }}';
 
 	{{ relationships }}
 

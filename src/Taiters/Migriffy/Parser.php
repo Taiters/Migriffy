@@ -23,7 +23,7 @@ class Parser {
 			array_push( $gliffyNodes, $this->parseObject( $object ) );
 		}
 
-		dd( $gliffyNodes );
+		return new NodeCollection( $gliffyNodes );
 	}
 
 	private function parseObject( $object ) {

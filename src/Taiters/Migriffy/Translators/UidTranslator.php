@@ -2,7 +2,7 @@
 
 use Doctrine\Common\Inflector\Inflector;
 
-class UidTranslator implements Translator{
+class UidTranslator implements ParserTranslator{
 
 	public function toBinding( $uid ) {
 

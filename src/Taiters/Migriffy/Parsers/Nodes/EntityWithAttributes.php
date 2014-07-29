@@ -32,6 +32,7 @@ class EntityWithAttributes extends BaseNodeParser {
 
 		return array(
 			'id' => $object->id,
+			'type' => 'model',
 			'name' => $name,
 			'attributes' => $attributes
 		);
