@@ -93,7 +93,7 @@ class Generate extends Command {
 				date('Y_m_d_His'),
 				$migrationTemplate->table
 			);
-			
+
 			$this->filesystem->put( $filename, $migrationTemplate );
 
 			$this->info('Created: '.$filename);
@@ -107,7 +107,7 @@ class Generate extends Command {
 		foreach( $nodes as $node ) {
 
 			$modelTemplate = $this->modelGenerator->generate( $node );
-			
+
 			$filename = self::$MODELS_PATH.DIRECTORY_SEPARATOR.$modelTemplate->name.'.php';
 			$this->filesystem->put( $filename, $modelTemplate );
 

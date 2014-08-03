@@ -14,11 +14,11 @@ class Node {
 
 	public function addRelationship( $node, $type ) {
 
-		if( !isset( $this->relations[ $type ] ) ) {
+		if( !isset( $this->relationships[ $type ] ) ) {
 
 			$this->relationships[ $type ] = [];
 		}
-
+		
 		array_push( $this->relationships[ $type ], $node );
 	}
 }
