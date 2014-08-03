@@ -20,6 +20,8 @@ class MigriffyServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app->singleton('migriffy.generate', 'Taiters\Migriffy\Commands\Generate');
+		$this->app->singleton('migriffy.migrations', 'Taiters\Migriffy\Commands\Migrations');
+		$this->app->singleton('migriffy.models', 'Taiters\Migriffy\Commands\Models');
 
 		$translator = $this->app->make('Taiters\Migriffy\Translators\ParserClassPathTranslator');
 		$parsers    = $this->getParsers();
@@ -36,6 +38,8 @@ class MigriffyServiceProvider extends ServiceProvider {
 	public function boot() {
 
 		$this->commands('migriffy.generate');
+		$this->commands('migriffy.migrations');
+		$this->commands('migriffy.models');
 	}
 
 	/**
