@@ -10,5 +10,4 @@ class {{ name }} extends Eloquent {
 	protected $table = '{{ table }}';
 
 	{{ relationships }}
-
 }

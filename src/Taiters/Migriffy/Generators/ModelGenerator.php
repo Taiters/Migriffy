@@ -1,26 +1,26 @@
-<?php namespace Taiters\Migriffy;
+<?php namespace Taiters\Migriffy\Generators;
 
 use Taiters\Migriffy\Translators\NodeTranslator;
-use Doctrine\Common\Inflector\Inflector;
+use Taiters\Migriffy\Template;
 
 class ModelGenerator {
 
 	private $nodeTranslator;
-	private $template;
+	private $modelString;
 
 	public function __construct(NodeTranslator $nodeTranslator) {
 
 		$this->nodeTranslator = $nodeTranslator;
-		$this->template = file_get_contents( __DIR__.DIRECTORY_SEPARATOR.'templates'.DIRECTORY_SEPARATOR.'model');
 	}
 
 	public function generate( $node ) {
 
-		$modelFile = $this->template;
+		$template = new Template('model');
 
 		$tableName = $this->nodeTranslator->toTable( $node );
 
-		$modelFile = str_replace('{{ table }}', $tableName, $modelFile);
+		$template->name  = $node->name;
+		$template->table = $tableName;
 
 		$relationships = '';
 
@@ -39,9 +39,9 @@ class ModelGenerator {
 			}
 		}
 
-		$modelFile = str_replace('{{ relationships }}', $relationships, $modelFile);
-		$modelFile = str_replace('{{ name }}', $node->name, $modelFile);
+		$template->relationships = $relationships;
 
-		return $modelFile;
+		return $template;
 	}
+
 }
