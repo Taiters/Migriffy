@@ -19,7 +19,7 @@ class NodeTranslator {
 		return sprintf('Create%sTable', Inflector::classify( $this->toTable($node) ));
 	}
 
-	public function toRelation( $node, $type ) {
+	public function toRelation( $node, $type = null ) {
 
 		$name = $node->name;
 

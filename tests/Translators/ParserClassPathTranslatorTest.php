@@ -153,18 +153,18 @@ class ParserClassPathTranslatorTest extends PHPUnit_Framework_TestCase {
 
 
 
-	private function getParser() {
+	private function getTranslator() {
 
 		return new ParserClassPathTranslator();
 	}
 
 	private function getTranslatedBinding( $string ) {
 
-		return $this->getParser()->toBinding( $string );
+		return $this->getTranslator()->toBinding( $string );
 	}
 
 	private function getTranslatedClass( $string ) {
 
-		return $this->getParser()->toClass( $string );
+		return $this->getTranslator()->toClass( $string );
 	}
 }

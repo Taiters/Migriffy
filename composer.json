@@ -11,7 +11,8 @@
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*",
         "doctrine/inflector": "1.*",
-        "sunra/php-simple-html-dom-parser": "v1.5.0"
+        "sunra/php-simple-html-dom-parser": "v1.5.0",
+        "mockery/mockery": "dev-master"
     },
     "autoload": {
         "psr-0": {
