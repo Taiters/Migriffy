@@ -10,9 +10,12 @@ class MigrationAttributeGenerator {
 
 		$attributeString = sprintf("\$table->%s('%s')", $attribute['type'], $attribute['name']);
 
-		foreach( $attribute['attributes'] as $attributeName ) {
+		if( isset( $attribute['attributes'] ) ) {
+		
+			foreach( $attribute['attributes'] as $attributeName ) {
 
-			$attributeString .= '->'.$attributeName.'()';
+				$attributeString .= '->'.$attributeName.'()';
+			}
 		}
 
 		return $attributeString.";\n\t\t\t";
